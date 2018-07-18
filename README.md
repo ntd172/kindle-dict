@@ -22,7 +22,7 @@ https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000234621
 - Add `kindlegen` to your `$PATH`
 - Make sure you install `calibre` application for your `MacOSX` 
 ```
-https://calibre-ebook.com/download)
+https://calibre-ebook.com/download
 ``` 
 
 ### Installing
