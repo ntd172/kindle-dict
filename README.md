@@ -8,7 +8,7 @@ dictionary. Unfortunately, I have found none. Then I decided to create my own En
 ## Getting Started
 
 These instructions will help you to create your own dictionary for Amazon Kindle. Feel free to modify 
-and change the code to fit your needs. 
+and change the code to fit your needs.
 
 ### Prerequisites
   
@@ -24,11 +24,27 @@ https://calibre-ebook.com/download
 ``` 
 
 ### Installing
-Generate ```out``` folder using this command 
+If you don't care about any technical stuff, just ignore and import `doc.mobi` to your `calibre` app.
+
+
+Otherwise, you can take a look at `build_dict.sh` to see how I generate that file. 
 
 ```
-./covert_json_to_dict.sh 
+./build_dict.sh 
 
 ```
+
+### Limitation
+
+Initially I tried to import all words and definition from `startdict_en_vi.txt` (~350K words).
+`KindleGen` was not able to handle that much of data so I needed to reduce the number of words to import. 
+
+I used this awk command line to filter common English words with english-dictionary. 
+```
+awk -F, 'FNR==NR {a[$1]; next}; $1 in a' enable1.txt stardict_en_vi.txt > common-english-viet-words.txt
+
+```
+
+
 
 
