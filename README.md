@@ -45,6 +45,7 @@ awk -F, 'FNR==NR {a[$1]; next}; $1 in a' enable1.txt stardict_en_vi.txt > common
 
 ```
 
+### Happy Reading
 
-
+![Alt text](example.png?raw=true "Sample Page")
 
