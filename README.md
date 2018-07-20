@@ -41,7 +41,7 @@ Initially I tried to import all words and definition from `startdict_en_vi.txt` 
 
 I used this awk command line to filter common English words with english-dictionary. 
 ```
-awk -F, 'FNR==NR {a[$1]; next}; $1 in a' enable1.txt stardict_en_vi.txt > common-english-viet-words.txt
+awk -F\t 'FNR==NR {a[$1]; next}; $1 in a' enable1.txt stardict_en_vi.txt > common-english-viet-words.txt
 
 ```
 
