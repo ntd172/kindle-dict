@@ -21,7 +21,7 @@ time sed '1d;$d' ${INPUT} | awk '{
 
 # Need to reserve BOM (Byte Order Mark) for dic.html and doc.opf
 (echo -n -e '\xEF\xBB\xBF'; cat ${TEMPLATE_DIR}/header.html ${OUT_DIR}/entries.html ${TEMPLATE_DIR}/footer.html) > ${OUT_DIR}/dic.html;
-(echo -n -e '\xEF\xBB\xBF'; cat ${TEMPLATE_DIR}/doc.opf) >  ${OUT_DIR}/doc.opf;
+(echo -n -e '\xEF\xBB\xBF'; cat ${TEMPLATE_DIR}/doc.opf) >  ${OUT_DIR}/eng-viet-dict.opf;
 cp ${TEMPLATE_DIR}/dic.png ${OUT_DIR}/;
 
-time kindlegen  -verbose ${OUT_DIR}/doc.opf;
+time kindlegen  -verbose ${OUT_DIR}/eng-viet-dict.opf;

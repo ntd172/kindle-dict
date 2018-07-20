@@ -1,3 +1,9 @@
+## TLDR;
+
+1. Just download `eng-viet-dict.mobi` file and send it to your kindle email `<user.name>@kindle.com`!
+2. Wait for your kindle to download the dictionary file. 
+3. Change your default dictionary to `English-Viet-Dictionary`.
+
 # English Vietnamese Dictionary for Kindle #
 
 Last year, I received a Amazon Kindle PaperWhite as a gift. Since then, I've been reading more books from my Kindle. 
@@ -24,7 +30,8 @@ https://calibre-ebook.com/download
 ``` 
 
 ### Installing
-If you don't care about any technical stuff, just ignore and import `doc.mobi` to your `calibre` app.
+If you don't care about any technical stuff, just ignore and import `eng-viet-dict.mobi` to your `calibre` app or email this 
+file to kindle email `<username>@kindle.com`
 
 
 Otherwise, you can take a look at `build_dict.sh` to see how I generate that file. 
@@ -39,9 +46,9 @@ Otherwise, you can take a look at `build_dict.sh` to see how I generate that fil
 Initially I tried to import all words and definition from `startdict_en_vi.txt` (~350K words).
 `KindleGen` was not able to handle that much of data so I needed to reduce the number of words to import. 
 
-I used this awk command line to filter common English words with english-dictionary. 
+I used this awk to get common words from `dictionary.txt` file. 
 ```
-awk -F\t 'FNR==NR {a[$1]; next}; $1 in a' enable1.txt stardict_en_vi.txt > common-english-viet-words.txt
+awk -F\t 'FNR==NR {a[$1]; next}; $1 in a' dictionary.txt stardict_en_vi.txt > common-english-viet-words.txt
 
 ```
 

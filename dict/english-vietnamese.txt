@@ -1,1 +1,0 @@
-https://github.com/lpdevs/stardict-text-mongodb/blob/master/stardict/stardict_en_vi.txt
